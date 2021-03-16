@@ -37,11 +37,8 @@ public class AppClass {
         try {
             studentService.add(parameters);
             assert studentService.getSize() == sizeInitial+1;
-            System.out.println("Success");
         } catch (ValidatorException e) {
             assert false;
-            System.out.println("Ups");
-            e.printStackTrace();
         }
 
 
