@@ -68,7 +68,5 @@ public class AppClass {
             assert true;
             //e.printStackTrace();
         }
-
-
     }
 }

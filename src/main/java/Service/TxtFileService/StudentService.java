@@ -9,8 +9,14 @@ public class StudentService extends AbstractService<String,Student> {
     }
 
     @Override
-    public Student extractEntity(String[] info){
-        return new Student("","",2,"","");
+    protected Student extractEntity(String[] params){
+        int grupa=0;
+        try{
+            grupa=Integer.parseInt(params[2]);
+        }catch(NumberFormatException ex){
+            System.out.println(ex.getMessage());
+        }
+        return new Student(params[0],params[1],grupa,params[3],params[4]);
     }
 
 }
