@@ -24,7 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9ddeaaa6-f020-401c-8b07-2ee5f785493f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/tests/AppClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/tests/AppClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/tests/TestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/TxtFileService/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/TxtFileService/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ssvv/tests/AppClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ssvv/tests/AppClass.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +76,20 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.TestRunner">
+  <component name="RunManager" selected="Application.AppClass">
+    <configuration name="AppClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ssvv.tests.AppClass" />
+      <module name="MonitorizareTemeLaboratorV03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MonitorizareTemeLaboratorV03" />
@@ -96,26 +113,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AppClass" />
         <item itemvalue="Application.TestRunner" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -145,13 +164,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="270" y="30" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1615292015569">
@@ -163,25 +181,25 @@
     </state>
     <state x="458" y="116" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1615926430892" />
     <state x="549" y="140" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1615197864597" />
-    <state width="1237" height="283" key="GridCell.Tab.0.bottom" timestamp="1615926236836">
+    <state width="1237" height="283" key="GridCell.Tab.0.bottom" timestamp="1616193097548">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="283" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1615926236836" />
+    <state width="1237" height="283" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1616193097548" />
     <state width="1493" height="401" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615191008912" />
-    <state width="1237" height="283" key="GridCell.Tab.0.center" timestamp="1615926236835">
+    <state width="1237" height="283" key="GridCell.Tab.0.center" timestamp="1616193097548">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="283" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1615926236835" />
+    <state width="1237" height="283" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1616193097548" />
     <state width="1493" height="401" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1615191008912" />
-    <state width="1237" height="283" key="GridCell.Tab.0.left" timestamp="1615926236834">
+    <state width="1237" height="283" key="GridCell.Tab.0.left" timestamp="1616193097548">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="283" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1615926236834" />
+    <state width="1237" height="283" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1616193097548" />
     <state width="1493" height="401" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1615191008912" />
-    <state width="1237" height="283" key="GridCell.Tab.0.right" timestamp="1615926236835">
+    <state width="1237" height="283" key="GridCell.Tab.0.right" timestamp="1616193097548">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="283" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1615926236835" />
+    <state width="1237" height="283" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1616193097548" />
     <state width="1493" height="401" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1615191008912" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1615293973009">
       <screen x="0" y="0" width="1280" height="680" />
