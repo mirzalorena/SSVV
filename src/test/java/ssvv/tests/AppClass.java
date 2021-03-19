@@ -10,6 +10,8 @@ import org.junit.Test;
 
 import java.io.IOException;
 
+import static junit.framework.Assert.assertEquals;
+
 
 public class AppClass {
     private Repo repo;
@@ -98,4 +100,5 @@ public class AppClass {
             //e.printStackTrace();
         }
     }
+
 }
