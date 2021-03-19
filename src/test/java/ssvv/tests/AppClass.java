@@ -69,4 +69,33 @@ public class AppClass {
             //e.printStackTrace();
         }
     }
+
+    @Test
+    public void testCase3AddStudent() throws IOException {
+        /**
+         * Invalid group
+         */
+        StudentValidator vs=new StudentValidator();
+        Repo studentRepo = new StudentFileRepo("studenti.txt", vs);
+        Service studentService=new StudentService((StudentFileRepo) studentRepo);
+
+        int sizeInitial=studentService.getSize();
+
+        //input data
+        String idStudent="1234";
+        String nameStudent="Ion Glanetasu";
+        String group="lala";
+        String email="lala@";
+        String teacher="lalaMare";
+
+        String[] parameters=new String[]{idStudent,nameStudent,group,email,teacher};
+
+        try {
+            studentService.add(parameters);
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+            //e.printStackTrace();
+        }
+    }
 }
