@@ -40,7 +40,7 @@ public class AppClass {
     }
 
     @Test
-    public void testCase1AddStudent() throws IOException {
+    public void testCase1AddStudent(){
         int sizeInitial=studentService.getSize();
 
         //input data

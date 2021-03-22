@@ -14,7 +14,13 @@ public abstract class AbstractFileRepository<ID,E extends HasId<ID>> extends Abs
     public AbstractFileRepository(IValidator v,String filename) {
         super(v);
         this.filename=filename;
-        //readFromFile();
+        try {
+            readFromFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ValidatorException e) {
+            e.printStackTrace();
+        }
     }
 
     private void writeAll() throws IOException{
