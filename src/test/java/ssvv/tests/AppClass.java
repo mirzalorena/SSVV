@@ -6,6 +6,7 @@ import Repository.TxtFileRepository.StudentFileRepo;
 import Service.Service;
 import Service.TxtFileService.StudentService;
 import Validator.StudentValidator;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
@@ -14,8 +15,8 @@ import org.junit.runner.notification.Failure;
 import java.io.IOException;
 
 public class AppClass {
-    private Repo repo;
-    private Service service;
+    private Repo studentRepo;
+    private Service studentService;
 
     public static void main(String[] args)
     {
@@ -25,12 +26,21 @@ public class AppClass {
         System.out.println(result.wasSuccessful());
     }
 
+    @Before
+    public void setup()
+    {
+        StudentValidator vs=new StudentValidator();
+        studentRepo = null;
+        try {
+            studentRepo = new StudentFileRepo("studenti.txt", vs);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+         studentService=new StudentService((StudentFileRepo) studentRepo);
+    }
+
     @Test
     public void testCase1AddStudent() throws IOException {
-        StudentValidator vs=new StudentValidator();
-        Repo studentRepo = new StudentFileRepo("studenti.txt", vs);
-        Service studentService=new StudentService((StudentFileRepo) studentRepo);
-
         int sizeInitial=studentService.getSize();
 
         //input data
@@ -53,11 +63,7 @@ public class AppClass {
     }
 
     @Test
-    public void testCase2AddStudent() throws IOException {
-        StudentValidator vs=new StudentValidator();
-        Repo studentRepo = new StudentFileRepo("studenti.txt", vs);
-        Service studentService=new StudentService((StudentFileRepo) studentRepo);
-
+    public void testCase2AddStudent() {
         //input data
         String idStudent="1234";
         String nameStudent="";
