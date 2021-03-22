@@ -7,6 +7,7 @@ import Exceptions.ValidatorException;
 import Exceptions.RepositoryException;
 import java.io.IOException;
 import java.io.*;
+import java.util.Scanner;
 
 public abstract class AbstractFileRepository<ID,E extends HasId<ID>> extends AbstractCrudRepo<ID,E> {
     private String filename;
@@ -24,10 +25,11 @@ public abstract class AbstractFileRepository<ID,E extends HasId<ID>> extends Abs
     }
 
     private void writeAll() throws IOException{
-        DataOutputStream out = new DataOutputStream(new FileOutputStream(filename));
-        super.findAll().forEach(x-> { try { out.writeChars(x.toString()); } catch (IOException e) { e.printStackTrace(); } });
-
+        FileWriter myWriter = new FileWriter(filename);
+        super.findAll().forEach(x-> { try { myWriter.write(x.toString()); myWriter.write("\n");} catch (IOException e) { e.printStackTrace(); } });
+        myWriter.close();
     }
+
     private void writeToFile(E entity)throws IOException {
         DataOutputStream out = new DataOutputStream(new FileOutputStream(filename));
         out.writeChars(entity.toString());
@@ -35,14 +37,14 @@ public abstract class AbstractFileRepository<ID,E extends HasId<ID>> extends Abs
 
     private void readFromFile() throws IOException, ValidatorException {
         DataInputStream in = new DataInputStream(new FileInputStream(filename));
-        String line;
-        while((line=in.readUTF())!=null){
-            String[] info=line.split("#");
+        File myObj = new File(filename);
+        Scanner myReader = new Scanner(myObj);
+        while (myReader.hasNextLine()) {
+            String data = myReader.nextLine();
+            String[] info=data.split("#");
             E e=extractEntity(info);
             E saved = super.save(e);
-
         }
-
     }
 
     public abstract E extractEntity(String[] info);
