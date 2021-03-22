@@ -64,7 +64,7 @@ public class AppClass {
     public void testCase2AddStudent() {
         //input data
         String idStudent="1234";
-        String nameStudent="";
+        String nameStudent="la";
         String group="-5";
         String email="lala@";
         String teacher="lalaMare";
