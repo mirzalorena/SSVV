@@ -58,8 +58,6 @@ public class AppClass {
         } catch (ValidatorException e) {
             assert false;
         }
-
-
     }
 
     @Test
@@ -77,6 +75,68 @@ public class AppClass {
             studentService.add(parameters);
             assert false;
         } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC1_BBT_EC() {
+        int sizeInitial=studentService.getSize();
+
+        try {
+            studentService.add(new String[]{"0", "Lala", "934","lala@","lalaMare"});
+            assert studentService.getSize() == sizeInitial+1;
+        } catch (ValidatorException e) {
+            assert false;
+        }
+    }
+
+    @Test
+    public void TC2_BBT_EC() {
+        try {
+            studentService.add(new String[]{"0", "", "934","lala@","lalaMare"});
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC3_BBT_EC() {
+        try {
+            studentService.add(new String[]{"0", "Lala", "-5","lala@","lalaMare"});
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC4_BBT_EC() {
+        try {
+            studentService.add(new String[]{"", "Lala", "939","lala@","lalaMare"});
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC5_BBT_EC() {
+        try {
+            studentService.add(new String[]{"0", "Lala", "93aa","lala@","lalaMare"});
+            assert false;
+        } catch (Exception e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC6_BBT_EC() {
+        try {
+            studentService.add(new String[]{"0", "Lala", "","lala@","lalaMare"});
+            assert false;
+        } catch (Exception e) {
             assert true;
         }
     }
