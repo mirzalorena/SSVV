@@ -141,5 +141,37 @@ public class AppClass {
         }
     }
 
+    @Test
+    public void TC7_BBT_BVA() {
+        int sizeInitial=studentService.getSize();
+
+        try {
+            studentService.add(new String[]{"10", "Lalaa", "934","lala@","lalaMare"});
+            assert studentService.getSize() == sizeInitial+1;
+        } catch (ValidatorException e) {
+            assert false;
+        }
+    }
+
+    @Test
+    public void TC8_BBT_BVA() {
+        try {
+            studentService.add(new String[]{"11", "Lala", "-10","lala@","lalaMare"});
+            assert false;
+        } catch (Exception e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC9_BBT_BVA() {
+        try {
+            studentService.add(new String[]{"11", "", "-10","lala@","lalaMare"});
+            assert false;
+        } catch (Exception e) {
+            assert true;
+        }
+    }
+
 
 }
