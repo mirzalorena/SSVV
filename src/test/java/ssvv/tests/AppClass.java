@@ -74,7 +74,7 @@ public class AppClass {
         try {
             studentService.add(parameters);
             assert false;
-        } catch (ValidatorException e) {
+        } catch (Exception e) {
             assert true;
         }
     }
