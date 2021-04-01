@@ -48,7 +48,7 @@ public class TestAddAssignment {
         int sizeInitial=assignService.getSize();
 
         try {
-            assignService.add(new String[]{"501", "LalaTema", "8","6"});
+            assignService.add(new String[]{"5012", "LalaTema", "8","6"});
             assert assignService.getSize() == sizeInitial+1;
         } catch (ValidatorException e) {
             assert false;
@@ -59,7 +59,7 @@ public class TestAddAssignment {
     public void TC2_WBT_AddAssignment()
     {
         try {
-            assignService.add(new String[]{"", "LalaTema", "8","6"});
+            assignService.add(new String[]{null, "LalaTema", "8","6"});
             assert false;
         } catch (ValidatorException e) {
             assert true;
@@ -126,7 +126,7 @@ public class TestAddAssignment {
         int sizeInitial=assignService.getSize();
 
         try {
-            assignService.add(new String[]{"121", "LalaTema", "8","6"});
+            assignService.add(new String[]{"1212", "LalaTema", "8","6"});
             assert assignService.getSize() == sizeInitial+1;
         } catch (ValidatorException e) {
             assert false;
