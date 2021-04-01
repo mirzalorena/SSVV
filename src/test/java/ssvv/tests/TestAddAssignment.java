@@ -43,6 +43,85 @@ public class TestAddAssignment {
     }
 
     @Test
+    public void TC1_WBT_AddAssignment()
+    {
+        int sizeInitial=assignService.getSize();
+
+        try {
+            assignService.add(new String[]{"5", "LalaTema", "8","6"});
+            assert assignService.getSize() == sizeInitial+1;
+        } catch (ValidatorException e) {
+            assert false;
+        }
+    }
+
+    @Test
+    public void TC2_WBT_AddAssignment()
+    {
+        try {
+            assignService.add(new String[]{"", "LalaTema", "8","6"});
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC3_WBT_AddAssignment()
+    {
+        try {
+            assignService.add(new String[]{"7", "", "8","6"});
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC4_WBT_AddAssignment()
+    {
+        try {
+            assignService.add(new String[]{"7", "LalaTema", "18","6"});
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC5_WBT_AddAssignment()
+    {
+        try {
+            assignService.add(new String[]{"7", "LalaTema", "8","16"});
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC6_WBT_AddAssignment()
+    {
+        try {
+            assignService.add(new String[]{"7", "LalaTema", "-18","6"});
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC7_WBT_AddAssignment()
+    {
+        try {
+            assignService.add(new String[]{"7", "LalaTema", "8","-16"});
+            assert false;
+        } catch (ValidatorException e) {
+            assert true;
+        }
+    }
+
+    @Test
     public void testAddAssignmentSuccess() {
         int sizeInitial=assignService.getSize();
 
