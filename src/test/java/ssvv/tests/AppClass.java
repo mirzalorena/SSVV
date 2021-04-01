@@ -44,7 +44,7 @@ public class AppClass {
         int sizeInitial=studentService.getSize();
 
         //input data
-        String idStudent="1234";
+        String idStudent="12345";
         String nameStudent="lala";
         String group="100";
         String email="lala@";
@@ -84,7 +84,7 @@ public class AppClass {
         int sizeInitial=studentService.getSize();
 
         try {
-            studentService.add(new String[]{"0", "Lala", "934","lala@","lalaMare"});
+            studentService.add(new String[]{"5", "Lala", "934","lala@","lalaMare"});
             assert studentService.getSize() == sizeInitial+1;
         } catch (ValidatorException e) {
             assert false;
@@ -146,7 +146,7 @@ public class AppClass {
         int sizeInitial=studentService.getSize();
 
         try {
-            studentService.add(new String[]{"10", "Lalaa", "934","lala@","lalaMare"});
+            studentService.add(new String[]{"100", "Lalaa", "934","lala@","lalaMare"});
             assert studentService.getSize() == sizeInitial+1;
         } catch (ValidatorException e) {
             assert false;
