@@ -22,7 +22,7 @@ public class TestAddAssignment {
     private Service assignService;
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(AppClass.class);
+        Result result = JUnitCore.runClasses(TestAddAssignment.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }
