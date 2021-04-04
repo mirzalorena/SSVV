@@ -122,6 +122,37 @@ public class TestAddAssignment {
     }
 
     @Test
+    public void TC8_WBT_AddAssignment()
+    {
+        try {
+            assignService.add(new String[]{"7", "LalaTema", "8ac","-16"});
+            assert false;
+        } catch (Exception e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void TC9_WBT_AddAssignment()
+    {
+        assignRepo = null;
+        TemaLabValidator vs = new TemaLabValidator();
+        try {
+            assignRepo = new TemaLabFileRepo("TemaLaborator1.txt", vs);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        assignService = new TemaLabService((TemaLabFileRepo) assignRepo);
+
+        try {
+            assignService.add(new String[]{"7", "LalaTema", "8","-16"});
+            assert false;
+        } catch (Exception e) {
+            assert true;
+        }
+    }
+
+    @Test
     public void testAddAssignmentSuccess() {
         int sizeInitial=assignService.getSize();
 

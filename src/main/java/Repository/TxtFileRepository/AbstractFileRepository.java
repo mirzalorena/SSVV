@@ -36,14 +36,18 @@ public abstract class AbstractFileRepository<ID,E extends HasId<ID>> extends Abs
     }
 
     private void readFromFile() throws IOException, ValidatorException {
-        DataInputStream in = new DataInputStream(new FileInputStream(filename));
-        File myObj = new File(filename);
-        Scanner myReader = new Scanner(myObj);
-        while (myReader.hasNextLine()) {
-            String data = myReader.nextLine();
-            String[] info=data.split("#");
-            E e=extractEntity(info);
-            E saved = super.save(e);
+        try {
+            DataInputStream in = new DataInputStream(new FileInputStream(filename));
+            File myObj = new File(filename);
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                String[] info = data.split("#");
+                E e = extractEntity(info);
+                E saved = super.save(e);
+            }
+        } catch (IOException e) {
+           System.out.println(e.getStackTrace());
         }
     }
 
