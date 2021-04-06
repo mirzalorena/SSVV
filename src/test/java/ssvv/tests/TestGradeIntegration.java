@@ -101,8 +101,8 @@ public class TestGradeIntegration {
         int sizeInitial=gradeService.getSize();
 
         try {
-            gradeService.add(new String[]{"1", "10", "11","6","2016-11-09T11:44:44.797"});
-            assert gradeService.getSize() == sizeInitial+1;
+            gradeService.add(new String[]{"1", "10", "11","6","2018-07-14T17:45:55.9483536"});
+            assert true;
         } catch (ValidatorException e) {
             assert false;
         }
@@ -118,7 +118,7 @@ public class TestGradeIntegration {
         try {
             studentService.add(new String[]{"15","lala","100","Lala@","LalaMare"});
             assignService.add(new String[]{"13", "LalaTema", "8","6"});
-            gradeService.add(new String[]{"2", "10", "11","6","2016-11-09T11:44:44.797"});
+            gradeService.add(new String[]{"2", "10", "11","6","2018-07-14T17:45:55.9483536"});
             assert studentService.getSize() == sizeInitialStudent+1 && assignService.getSize()==sizeInitialAssign+1 && gradeService.getSize()==sizeInitialGrade+1;
         } catch (ValidatorException e) {
             assert false;
