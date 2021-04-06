@@ -102,7 +102,7 @@ public class TestGradeIntegration {
 
         try {
             gradeService.add(new String[]{"1", "10", "11","6","2018-07-14T17:45:55.9483536"});
-            assert true;
+            assert gradeService.getSize() == sizeInitial+1;
         } catch (ValidatorException e) {
             assert false;
         }
