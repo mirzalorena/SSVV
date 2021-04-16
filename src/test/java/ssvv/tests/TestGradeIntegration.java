@@ -20,6 +20,7 @@ import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class TestGradeIntegration {
     private Repo assignRepo;
@@ -101,7 +102,9 @@ public class TestGradeIntegration {
         int sizeInitial=gradeService.getSize();
 
         try {
-            gradeService.add(new String[]{"1", "10", "11","6","2018-07-14T17:45:55.9483536"});
+            LocalDateTime datetime1 = LocalDateTime.of(2017, 1, 14, 10, 34);
+            String date=datetime1.toString();
+            gradeService.add(new String[]{"1", "10", "11","6",date});
             assert gradeService.getSize() == sizeInitial+1;
         } catch (ValidatorException e) {
             assert false;
