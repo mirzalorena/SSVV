@@ -52,7 +52,7 @@ public class TestGradeIntegration {
         try {
             assignRepo = new TemaLabFileRepo("TemaLaborator.txt", vs);
             studentRepo = new StudentFileRepo("studenti.txt", studentValidator);
-            gradeRepo = new NotaFileRepo("NoteStudenti.txt",notaValidator);
+            gradeRepo = new NotaFileRepo("Nota.txt",notaValidator);
         } catch (IOException e) {
             e.printStackTrace();
         }
