@@ -22,10 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ddeaaa6-f020-401c-8b07-2ee5f785493f" name="Default Changelist" comment="">
+    <list default="true" id="9ddeaaa6-f020-401c-8b07-2ee5f785493f" name="Default Changelist" comment="lala">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TemaLaborator.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TemaLaborator.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/tests/TestGradeIntegration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/tests/TestGradeIntegration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/studenti.txt" beforeDir="false" afterPath="$PROJECT_DIR$/studenti.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,6 +139,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TestGradeIntegration" />
@@ -180,8 +192,16 @@
       <workItem from="1617531175834" duration="6913000" />
       <workItem from="1617558687091" duration="792000" />
       <workItem from="1617703861857" duration="3890000" />
-      <workItem from="1618590325709" duration="1240000" />
+      <workItem from="1618590325709" duration="1464000" />
     </task>
+    <task id="LOCAL-00001" summary="lala">
+      <created>1618591588078</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618591588078</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +218,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lala" />
+    <option name="LAST_COMMIT_MESSAGE" value="lala" />
   </component>
   <component name="WindowStateProjectService">
     <state x="270" y="30" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1615292015569">
@@ -253,6 +277,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1615294082710" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1618591596748">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.1080.1920.515@0.0.1280.680" timestamp="1618591596748" />
     <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1617558689449">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
