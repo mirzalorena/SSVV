@@ -127,4 +127,57 @@ public class TestGradeIntegration {
             assert false;
         }
     }
+
+    @Test
+    public void TC5_Integration_AddStudent(){
+        int sizeInitial=studentService.getSize();
+
+        //input data
+        String idStudent="17";
+        String nameStudent="lala";
+        String group="100";
+        String email="lala@";
+        String teacher="lalaMare";
+
+        String[] parameters=new String[]{idStudent,nameStudent,group,email,teacher};
+
+        try {
+            studentService.add(parameters);
+            assert studentService.getSize() == sizeInitial+1;
+        } catch (ValidatorException e) {
+            assert false;
+        }
+    }
+
+    @Test
+    public void TC6_Integration_AddStudentAddAssign(){
+        int sizeInitialStudent=studentService.getSize();
+        int sizeInitialAssign=assignService.getSize();
+
+        try {
+            studentService.add(new String[]{"20","lala","100","lala@","lalaMare"});
+            assignService.add(new String[]{"18", "LalaTema", "8","6"});
+
+            assert studentService.getSize() == sizeInitialStudent+1 && assignService.getSize()==sizeInitialAssign+1;
+        } catch (ValidatorException e) {
+            assert false;
+        }
+    }
+
+    @Test
+    public void TC7_Integration_IntegrateAll()
+    {
+        int sizeInitialStudent=studentService.getSize();
+        int sizeInitialAssign=assignService.getSize();
+        int sizeInitialGrade=gradeService.getSize();
+
+        try {
+            studentService.add(new String[]{"22","lala","100","Lala@","LalaMare"});
+            assignService.add(new String[]{"23", "LalaTema", "8","6"});
+            gradeService.add(new String[]{"30", "22", "23","6","2018-07-14T17:45:55.9483536"});
+            assert studentService.getSize() == sizeInitialStudent+1 && assignService.getSize()==sizeInitialAssign+1 && gradeService.getSize()==sizeInitialGrade+1;
+        } catch (ValidatorException e) {
+            assert false;
+        }
+    }
 }
