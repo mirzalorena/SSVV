@@ -104,7 +104,7 @@ public class TestGradeIntegration {
         try {
             LocalDateTime datetime1 = LocalDateTime.of(2017, 1, 14, 10, 34);
             String date=datetime1.toString();
-            gradeService.add(new String[]{"1", "10", "11","6",date});
+            gradeService.add(new String[]{"11", "10", "11","6",date});
             assert gradeService.getSize() == sizeInitial+1;
         } catch (ValidatorException e) {
             assert false;
@@ -121,7 +121,7 @@ public class TestGradeIntegration {
         try {
             studentService.add(new String[]{"15","lala","100","Lala@","LalaMare"});
             assignService.add(new String[]{"13", "LalaTema", "8","6"});
-            gradeService.add(new String[]{"2", "10", "11","6","2018-07-14T17:45:55.9483536"});
+            gradeService.add(new String[]{"9", "10", "11","6","2018-07-14T17:45:55.9483536"});
             assert studentService.getSize() == sizeInitialStudent+1 && assignService.getSize()==sizeInitialAssign+1 && gradeService.getSize()==sizeInitialGrade+1;
         } catch (ValidatorException e) {
             assert false;
